@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <title>Title</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      
+   <nav class="navbar navbar-expand-lg navbar-dark bg-orange ">
+        <div class="container">
+            <a class="navbar-brand" href="/massaecia">Salsicha</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-inner-primary" aria-controls="nav-inner-primary" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav-inner-primary">
+                <div class="navbar-collapse-header">
+                    <div class="row">
+                        <div class="col-6 collapse-brand">
+                            <a href="/massaecia">
+                            </a>
+                        </div>
+                        <div class="col-6 collapse-close">
+                            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-inner-primary" aria-controls="nav-inner-primary" aria-expanded="false" aria-label="Toggle navigation">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <ul class="navbar-nav ml-lg-auto">
+                    <!-- Pessoa não logada -->
+                    		<a class="nav-link" href="/massaecia/fazer-login.php"><img src="" whidht='27' height='27' alt="" class="mr-2"> Entrar<span class="sr-only">(current)</span></a>
+	                    <!-- Pessoa não logada -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <button type='button' class='btn btn-block btn-success mb-3 d-none' id='sale' data-toggle='modal' data-target='#myModal'>Sacola<span id="qtd" class="ml-2 badge badge-pill badge-light"></span></button>
+    <section class='section section-shaped section-sm'>
+        <div class=" container col-sm-6">
+            <br>
+            <div class="container p-3 ">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-column">
+                        <span class="font-weight-bold">Salsicha lanche</span>
+                        <strong class="text-orange">Endereço</strong>
+                        <span class="text-muted">Av. Itaubas, número 49</span>
+                    </div>
+                    <img src="assets/img/logo.png" class="w-20" alt="">
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-column">
+                        <strong class="text-orange">Tempo Espera</strong>
+                        <span class="text-muted">40-50 minutos</span>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <strong class="text-orange">Celular</strong>
+                        <span class="text-muted">66 9933 8479</span>
+                    </div>
+                </div>
+            </div>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#mais-pedidos">Mais Pedidos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#combos">Combos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link  " data-toggle="tab" href="#menu2">Bebidas</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <form hidden id='carrinho'>
+                    <input id="idProduto" type="text">
+                    <input id="qtdProduto" type="text">
+                    <button id="sendForm" type="submit"></button>
+                </form>0
+                <div id="mais-pedidos" class="tab-pane active"><br>
+                    <ul class="list-group">
+                                        <li class='list-group-item'>
+                <div class='d-flex flex-row'>
+                    <div class='w-80'>
+                        <img src='assets/img/example.png' alt=''>
+                    </div>
+                    <div class='d-flex flex-column'>
+                        <div class='d-flex justify-content-between'>
+                            <p class='ml-3'><b> Combo casal economico</b></p>
+                            <p class='text-orange'><b>R$ 20,00</b></p>
+                        </div>
+                        <h6 class='ml-3 text-left'> 2 x baguncinha 2 refri lata 2 bombom batata frita e molhoverde
+</h6>
+                    </div>
+                </div>
+                <div class='d-flex justify-content-end'>
+                <div class='quantidade'>
+                <input type='hidden' name='add-cart'>
+                <input type='hidden' name='produto-id' value='626'>
+                </div>
+                    <button onclick="addForm('626', 1)" type='submit' class='btn btn-sm btn-orange align-text-bottom'>ADICIONAR</button>
+                </div>
+            </li>
+                            <li class='list-group-item'>
+                <div class='d-flex flex-row'>
+                    <div class='w-80'>
+                        <img src='assets/img/example.png' alt=''>
+                    </div>
+                    <div class='d-flex flex-column'>
+                        <div class='d-flex justify-content-between'>
+                            <p class='ml-3'><b> Montanha</b></p>
+                            <p class='text-orange'><b>R$ 14,90</b></p>
+                        </div>
+                        <h6 class='ml-3 text-left'> batata - salsicha- ovo - bacon</h6>
+                    </div>
+                </div>
+                <div class='d-flex justify-content-end'>
+                <div class='quantidade'>
+                <input type='hidden' name='add-cart'>
+                <input type='hidden' name='produto-id' value='632'>
+                </div>
+                    <button onclick="addForm('632', 1)" type='submit' class='btn btn-sm btn-orange align-text-bottom'>ADICIONAR</button>
+                </div>
+            </li>
+                            <li class='list-group-item'>
+                <div class='d-flex flex-row'>
+                    <div class='w-80'>
+                        <img src='assets/img/example.png' alt=''>
+                    </div>
+                    <div class='d-flex flex-column'>
+                        <div class='d-flex justify-content-between'>
+                            <p class='ml-3'><b> x-tudao</b></p>
+                            <p class='text-orange'><b>R$ 20,00</b></p>
+                        </div>
+                        <h6 class='ml-3 text-left'> ovos, bacon, acao de merda</h6>
+                    </div>
+                </div>
+                <div class='d-flex justify-content-end'>
+                <div class='quantidade'>
+                <input type='hidden' name='add-cart'>
+                <input type='hidden' name='produto-id' value='798'>
+                </div>
+                    <button onclick="addForm('798', 1)" type='submit' class='btn btn-sm btn-orange align-text-bottom'>ADICIONAR</button>
+                </div>
+            </li>
+                                </ul>
+                </div>
+                <div id="combos" class=" tab-pane fade"><br>
+                    <ul class="list-group">
+                                         <li class='list-group-item'>
+                <div class='d-flex flex-row'>
+                    <div class='w-80'>
+                        <img src='assets/img/example.png' alt=''>
+                    </div>
+                    <div class='d-flex flex-column'>
+                        <div class='d-flex justify-content-between'>
+                            <p class='ml-3'><b> dua lanche</b></p>
+                            <p class='text-orange'><b>R$ 10,00</b></p>
+                        </div>
+                        <h6 class='ml-3 text-left'> ovos, bacon calabresa e batata frita</h6>
+                    </div>
+                </div>
+                <div class='d-flex justify-content-end'>
+                <div class='quantidade'>
+                <input type='hidden' name='add-cart'>
+                <input type='hidden' name='produto-id' value='631'>
+                </div>
+                    <button onclick="addForm('631', 1)" type='submit' class='btn btn-sm btn-orange align-text-bottom'>ADICIONAR</button>
+                </div>
+            </li>
+                                </ul>
+                </div>
+                <div id="menu2" class=" tab-pane"><br>
+                    <ul class="list-group">
+                                         <li class='list-group-item'>
+                <div class='d-flex flex-row'>
+                    <div class='w-80'>
+                        <img src='assets/img/example.png' alt=''>
+                    </div>
+                    <div class='d-flex flex-column'>
+                        <div class='d-flex justify-content-between'>
+                            <p class='ml-3'><b> copo de refri</b></p>
+                            <p class='text-orange'><b>R$ 15,00</b></p>
+                        </div>
+                        <h6 class='ml-3 text-left'> copinho de refrinho</h6>
+                    </div>
+                </div>
+                <div class='d-flex justify-content-end'>
+                <div class='quantidade'>
+                <input type='hidden' name='add-cart'>
+                <input type='hidden' name='produto-id' value='797'>
+                </div>
+                    <button onclick="addForm('797', 1)" type='submit' class='btn btn-sm btn-orange align-text-bottom'>ADICIONAR</button>
+                </div>
+            </li>
+                                </ul>
+                </div>
+            </div>
+            <div class='modal' id='myModal' tabindex='-1' role='dialog' aria-hidden='true'>
+                <div class='modal-dialog modal-full' role='document'>
+                    <div class='modal-content'>
+                        <div class='modal-header bg-orange'>
+                            <h5 class='modal-title text-white'>Sua sacola</h5>
+                            <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+                                <span aria-hidden='true'>×</span>
+                            </button>
+                        </div>
+                        <div class='modal-body bg-light p-2' id='sacola'>
+            
+                            <div id="shopping-cart">
+                                                                </li>
+                            </div>
+                        </div>
+                        <form action='' method='post'>
+                            <div class="modal-footer">
+                                <div class="d-flex justify-content-between">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Adicionar mais itens</button>
+                                    <button type="submit" class="btn btn-danger color-white" name="finalizar-compra">Finalizar compra</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <form hidden id="removeForm">
+                <input id="idRemove" type="text">
+            </form>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
